@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
     {
         const auto description = det.surface_lookup()[i];
         const auto surface = detray::surface{det, description};
-        auto p_surface = surface_converter::convert_surface(surface, context);
+        auto p_surface = detray_actsvg_conversion::convert_surface(surface, context);
 
         // Style proto surface.
         p_surface._fill = style::fill({{0, 100, 0}, 0.5});

@@ -65,15 +65,15 @@ int main(int argc, char* argv[]) {
 
     //e_min_r, e_max_r, e_min_phi_rel, e_max_phi_rel, e_average_phi, e_shift_x, e_shift_y, e_size
     detray::mask<detray::annulus2D<>> ann2D{0u, 100.0, 200.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-    write_svg(surface_converter::convert_mask(ann2D), "test_plugins_actsvg_annulus2D.svg");
+    write_svg(detray_actsvg_conversion::convert_mask(ann2D), "test_plugins_actsvg_annulus2D.svg");
 
     //e_r, e_n_half_z, e_p_half_z, e_size
     detray::mask<detray::cylinder2D<>> cyl2D{0u, 100.0, -10.0, 10.0};
-    write_svg(surface_converter::convert_mask(cyl2D), "test_plugins_actsvg_cylinder2D.svg");
+    write_svg(detray_actsvg_conversion::convert_mask(cyl2D), "test_plugins_actsvg_cylinder2D.svg");
 
     //e_half_x, e_half_y, e_size
     detray::mask<detray::rectangle2D<>> rec2D{0u, 100.0, 100.0};
-    auto p = surface_converter::convert_mask(rec2D);
+    auto p = detray_actsvg_conversion::convert_mask(rec2D);
     auto tf = actsvg::style::transform();
     tf._rot = {35., 0., 0.};
     tf._tr = {10, 20};
@@ -82,17 +82,17 @@ int main(int argc, char* argv[]) {
 
     //e_inner_r, e_outer_r, e_size
     detray::mask<detray::ring2D<>> rin2D{0u, 50.0, 100.0};
-    write_svg(surface_converter::convert_mask(rin2D), "test_plugins_actsvg_ring2D.svg");
+    write_svg(detray_actsvg_conversion::convert_mask(rin2D), "test_plugins_actsvg_ring2D.svg");
 
     //e_half_length_0, e_half_length_1, e_half_length_2, e_divisor, e_size
     detray::mask<detray::trapezoid2D<>> tra2D{0u, 100.0, 50.0, 200.0 };
-    write_svg(surface_converter::convert_mask(tra2D), "test_plugins_actsvg_trapezoid2D.svg");
+    write_svg(detray_actsvg_conversion::convert_mask(tra2D), "test_plugins_actsvg_trapezoid2D.svg");
 
     //e_min_x, e_min_y, e_min_z, e_max_x, e_max_y, e_max_z, e_size
     //detray::mask<detray::cuboid3D<>> cub3D{0u, 0.0, 0.0, 100.0, 100.0, 100.0};
-    //write_svg(surface_converter::convert_mask(cub3D), "test_plugins_actsvg_cuboid3D.svg");
+    //write_svg(detray_actsvg_conversion::convert_mask(cub3D), "test_plugins_actsvg_cuboid3D.svg");
 
     //e_min_r, e_min_phi, e_min_z, e_max_r, e_max_phi, e_max_z, e_size
     //detray::mask<detray::cylinder3D> cyl3D{0u, 100.0, 0.0, 0.0, 300.0, 4.0, 10.0};
-    //write_svg(surface_converter::convert_mask(cyl3D), "test_plugins_actsvg_cylinder3D.svg");
+    //write_svg(detray_actsvg_conversion::convert_mask(cyl3D), "test_plugins_actsvg_cylinder3D.svg");
 }
