@@ -39,7 +39,8 @@ namespace detray_actsvg_conversion{
             //TODO: Check if this is the correct work around.
             static_cast<scalar>(euler_angles[2] * rad_to_deg),
             static_cast<scalar>(euler_angles[1] * rad_to_deg),
-            static_cast<scalar>(euler_angles[0] * rad_to_deg)};
+            static_cast<scalar>(euler_angles[0] * rad_to_deg)
+            };
 
         return ret;
     }
