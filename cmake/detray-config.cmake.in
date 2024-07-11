@@ -32,10 +32,6 @@ if( DETRAY_DISPLAY )
    find_dependency( actsvg )
 endif()
 
-# Set up the detray::Thrust target.
-set( DETRAY_THRUST_OPTIONS @DETRAY_THRUST_OPTIONS@ )
-thrust_create_target( detray::Thrust ${DETRAY_THRUST_OPTIONS} )
-
 # Print a standard information message about the package being found.
 include( FindPackageHandleStandardArgs )
 find_package_handle_standard_args( detray REQUIRED_VARS
