@@ -32,6 +32,8 @@ if( DETRAY_DISPLAY )
    find_dependency( actsvg )
 endif()
 
+find_dependency( detray::Thrust )
+
 # Print a standard information message about the package being found.
 include( FindPackageHandleStandardArgs )
 find_package_handle_standard_args( detray REQUIRED_VARS
